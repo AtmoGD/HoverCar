@@ -497,7 +497,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538169664}
-  m_LocalRotation: {x: 0.22975291, y: 0.0000000187053, z: -0.0000000044157225, w: 0.973249}
+  m_LocalRotation: {x: 0.22975291, y: -0.000000018722702, z: 0.00000000441983, w: 0.973249}
   m_LocalPosition: {x: 0, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -617,9 +617,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 4
   m_FollowOffset: {x: 0, y: 5, z: -10}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -723,7 +723,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786177184}
-  m_LocalRotation: {x: 0.22975291, y: 0.0000000187053, z: -0.0000000044157225, w: 0.973249}
+  m_LocalRotation: {x: 0.22975291, y: -0.000000018722702, z: 0.00000000441983, w: 0.973249}
   m_LocalPosition: {x: 0, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -776,9 +776,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 809169002, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169004, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169004, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169005, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169005, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Name
+      value: Direction
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169005, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Name
+      value: Angle
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169005, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169005, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169005, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 809169005, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2400687910058741817, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
       propertyPath: m_Name
       value: CarRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585657838083904421, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585657838083904421, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585657838083904421, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2585657838083904421, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3034058647720168067, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
       propertyPath: m_RootOrder
@@ -823,6 +879,78 @@ PrefabInstance:
     - target: {fileID: 3034058647720168067, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373317866594222573, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Name
+      value: Angle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Name
+      value: Direction
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Name
+      value: Color
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.x
+      value: 4.752742
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.y
+      value: 0.15693024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.z
+      value: 0.15693024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657544795200433091, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Overridden
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e47cd3d71986f5499ffa677f3f16864, type: 3}

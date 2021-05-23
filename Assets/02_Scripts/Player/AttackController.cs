@@ -11,13 +11,13 @@ public class AttackController : MonoBehaviour
     public float ActiveCooldown { get; private set; }
     public bool CanAttack { get; private set; }
     public bool IsAiming { get; private set; }
-    public Vector2 Direction { get; private set; }
+    public Vector3 Direction { get; private set; }
 
     void Awake()
     {
         Player = GetComponent<PlayerController>();
         ActiveAttack = Player.AttackUp;
-        Direction = Vector2.zero;
+        Direction = Vector3.zero;
     }
 
     void Update()
@@ -32,7 +32,8 @@ public class AttackController : MonoBehaviour
         if (_context.phase == InputActionPhase.Canceled)
             IsAiming = false;
 
-        Direction = _context.ReadValue<Vector2>();
+        Vector2 inputDir = _context.ReadValue<Vector2>();
+        Direction = new Vector3(inputDir.x, 0f, inputDir.y);
     }
 
     public void AttackPerformed(InputAction.CallbackContext _context)

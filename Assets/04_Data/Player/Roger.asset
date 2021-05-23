@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Roger
   m_EditorClassIdentifier: 
   moveForce: 1500
-  chargeSpeed: 2
+  chargeSpeed: 0.5
   recoverTime: 1
