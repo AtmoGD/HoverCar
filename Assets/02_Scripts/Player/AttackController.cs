@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class AttackController : MonoBehaviour
 {
     public PlayerController Player { get; private set; }
-    public SkillData ActiveAttack { get; set; }
     public float ActiveCooldown { get; private set; }
     public bool CanAttack { get; private set; }
     public bool IsAiming { get; private set; }
@@ -16,7 +15,6 @@ public class AttackController : MonoBehaviour
     void Awake()
     {
         Player = GetComponent<PlayerController>();
-        ActiveAttack = Player.AttackUp;
         Direction = Vector3.zero;
     }
 
@@ -46,36 +44,36 @@ public class AttackController : MonoBehaviour
 
     public void ChangeActiveAttackUp(InputAction.CallbackContext _context)
     {
-        if (_context.phase == InputActionPhase.Performed)
-            ActiveAttack = Player.AttackUp;
+        // if (_context.phase == InputActionPhase.Performed)
+            // ActiveAttack = Player.AttackUp;
     }
 
     public void ChangeActiveAttackDown(InputAction.CallbackContext _context)
     {
-        if (_context.phase == InputActionPhase.Performed)
-            ActiveAttack = Player.AttackDown;
+        // if (_context.phase == InputActionPhase.Performed)
+            // ActiveAttack = Player.AttackDown;
     }
 
     public void ChangeActiveAttackLeft(InputAction.CallbackContext _context)
     {
-        if (_context.phase == InputActionPhase.Performed)
-            ActiveAttack = Player.AttackLeft;
+        // if (_context.phase == InputActionPhase.Performed)
+            // ActiveAttack = Player.AttackLeft;
     }
 
     public void ChangeActiveAttackRight(InputAction.CallbackContext _context)
     {
-        if (_context.phase == InputActionPhase.Performed)
-            ActiveAttack = Player.AttackRight;
+        // if (_context.phase == InputActionPhase.Performed)
+            // ActiveAttack = Player.AttackRight;
     }
 
     private void Attack()
     {
         if (!IsAiming) return;
 
-        Vector3 spawnPosition = transform.position + ((Vector3)Direction * ActiveAttack.spawnDistance);
-        GameObject attack = Instantiate(ActiveAttack.attackPrefab, spawnPosition, transform.rotation);
-        attack.GetComponent<Skill>()?.TakeData(ActiveAttack, Player, Direction);
+        // Vector3 spawnPosition = transform.position + ((Vector3)Direction * ActiveAttack.spawnDistance);
+        // GameObject attack = Instantiate(ActiveAttack.attackPrefab, spawnPosition, transform.rotation);
+        // attack.GetComponent<Skill>()?.TakeData(ActiveAttack, Player, Direction);
 
-        ActiveCooldown = ActiveAttack.cooldown;
+        // ActiveCooldown = ActiveAttack.cooldown;
     }
 }

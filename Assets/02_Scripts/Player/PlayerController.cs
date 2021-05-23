@@ -28,11 +28,6 @@ public class PlayerController : MonoBehaviour
     public MovementController MovementController { get; private set; }
     public AttackController AttackController { get; private set; }
     public Rigidbody RB { get; private set; }
-    public SkillData AttackUp { get; private set; }
-    public SkillData AttackDown { get; private set; }
-    public SkillData AttackRight { get; private set; }
-    public SkillData AttackLeft { get; private set; }
-
     [SerializeField] private PlayerColor playerColor = PlayerColor.PINK;
     [SerializeField] public PlayerData data = null;
     [SerializeField] private Camera cam = null;
@@ -53,26 +48,5 @@ public class PlayerController : MonoBehaviour
     public void Hit(PlayerController _owner)
     {
         Debug.Log(playerColor + " got hit by: " + _owner.playerColor);
-    }
-
-    public void ChangeAttack(SkillData _newAttack, AttackPosition _position)
-    {
-        switch (_position)
-        {
-            case AttackPosition.UP:
-                AttackUp = _newAttack;
-                break;
-            case AttackPosition.DOWN:
-                AttackDown = _newAttack;
-                break;
-            case AttackPosition.LEFT:
-                AttackLeft = _newAttack;
-                break;
-            case AttackPosition.RIGHT:
-                AttackRight = _newAttack;
-                break;
-        }
-
-        AttackController.ActiveAttack = AttackUp;
     }
 }
