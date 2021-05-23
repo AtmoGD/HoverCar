@@ -17,12 +17,13 @@ public class MovementController : MonoBehaviour
     void Awake()
     {
         Player = GetComponent<PlayerController>();
-        Direction = Vector2.zero;
+        Direction = Vector3.zero;
     }
 
     void Update()
     {
-        if (IsCharging) {
+        if (IsCharging)
+        {
             Rotate();
             Charge();
         }
@@ -40,7 +41,9 @@ public class MovementController : MonoBehaviour
             ChargeAmount = 0f;
         }
         Vector2 inputDir = _context.ReadValue<Vector2>();
-        Direction = Util.GetDirection(inputDir, Player.cam);
+        
+        if (Player)
+            Direction = Util.GetDirection(inputDir, Player.cam);
     }
 
     public void MovePerformed(InputAction.CallbackContext _context)
@@ -51,7 +54,8 @@ public class MovementController : MonoBehaviour
             Move();
     }
 
-    private void Rotate() {
+    private void Rotate()
+    {
         transform.LookAt(transform.position + Direction, Vector3.up);
     }
 
@@ -65,9 +69,10 @@ public class MovementController : MonoBehaviour
 
     private void Move()
     {
-        Player.RB.AddForce(Direction * Player.data.moveForce * ChargeAmount);
+        Player?.RB.AddForce(Direction * Player.data.moveForce * ChargeAmount);
 
         ChargeAmount = 0f;
-        ActualRecover = Player.data.recoverTime;
+        if (Player)
+            ActualRecover = Player.data.recoverTime;
     }
 }

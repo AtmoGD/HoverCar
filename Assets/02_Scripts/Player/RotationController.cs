@@ -14,6 +14,8 @@ public class RotationController : MonoBehaviour
 
     public void Look(InputAction.CallbackContext _context)
     {
+        if (!Player) return;
+        
         Vector2 inputDir = _context.ReadValue<Vector2>();
         Player.cmCam.m_XAxis.m_InputAxisValue = inputDir.x;
         Player.cmCam.m_YAxis.m_InputAxisValue = inputDir.y;

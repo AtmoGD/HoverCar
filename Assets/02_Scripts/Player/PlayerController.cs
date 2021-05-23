@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     public MovementController MovementController { get; private set; }
     public AttackController AttackController { get; private set; }
     public Rigidbody RB { get; private set; }
-    [SerializeField] private PlayerColor playerColor = PlayerColor.PINK;
+    [SerializeField] public PlayerColor playerColor = PlayerColor.PINK;
     [SerializeField] public PlayerData data = null;
     [SerializeField] public Camera cam = null;
     [SerializeField] public CinemachineFreeLook cmCam = null;

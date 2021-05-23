@@ -32,7 +32,8 @@ public class AttackController : MonoBehaviour
 
         Vector2 inputDir = _context.ReadValue<Vector2>();
 
-        Direction = Util.GetDirection(inputDir, Player.cam);
+        if (Player)
+            Direction = Util.GetDirection(inputDir, Player.cam);
     }
 
 
@@ -48,25 +49,25 @@ public class AttackController : MonoBehaviour
     public void ChangeActiveAttackUp(InputAction.CallbackContext _context)
     {
         // if (_context.phase == InputActionPhase.Performed)
-            // ActiveAttack = Player.AttackUp;
+        // ActiveAttack = Player.AttackUp;
     }
 
     public void ChangeActiveAttackDown(InputAction.CallbackContext _context)
     {
         // if (_context.phase == InputActionPhase.Performed)
-            // ActiveAttack = Player.AttackDown;
+        // ActiveAttack = Player.AttackDown;
     }
 
     public void ChangeActiveAttackLeft(InputAction.CallbackContext _context)
     {
         // if (_context.phase == InputActionPhase.Performed)
-            // ActiveAttack = Player.AttackLeft;
+        // ActiveAttack = Player.AttackLeft;
     }
 
     public void ChangeActiveAttackRight(InputAction.CallbackContext _context)
     {
         // if (_context.phase == InputActionPhase.Performed)
-            // ActiveAttack = Player.AttackRight;
+        // ActiveAttack = Player.AttackRight;
     }
 
     private void Attack()
