@@ -1,0 +1,166 @@
+{
+    "name": "Input",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "ff27d8bc-e5da-4bd2-a967-0f51fb02bfd5",
+            "actions": [
+                {
+                    "name": "ChargeMovement",
+                    "type": "Value",
+                    "id": "ac4a3414-14e2-4927-b9d0-9a08a8eaba6f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PerformMove",
+                    "type": "Button",
+                    "id": "8ca24f39-21a0-4089-a141-1979747a7ac6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "AimAttack",
+                    "type": "Value",
+                    "id": "c83a4a01-dbcb-4547-a6a1-4d07072562e9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "PerformAttack",
+                    "type": "Button",
+                    "id": "4e5489b7-2165-4cdb-8ef2-756218b56bcb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ChangeActiveUp",
+                    "type": "Button",
+                    "id": "22909402-d032-4a3c-b844-ebc1b0fa9931",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ChangeActiveDown",
+                    "type": "Button",
+                    "id": "c5ec3390-29fc-4c57-8aaa-8385a2a0fc13",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ChangeActiveLeft",
+                    "type": "Button",
+                    "id": "de9f6508-cc33-4945-9e5b-7bfa9d0a9cf7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ChangeActiveRight",
+                    "type": "Button",
+                    "id": "ddece1ff-5190-40a7-8f3a-739d08b6f327",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1c128d44-f52e-4d4f-923d-eba8cb45187b",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChargeMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f78849b-a8ac-445c-8a90-adbfaf5fe44b",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PerformMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a7c6ee8-a193-4c1c-91e9-2e915446ed75",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0609bf21-3f7a-4b82-9800-7f8b2d5e5ee0",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PerformAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21649f58-7849-496f-8070-d1850f8c42ab",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeActiveUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f929ccb2-5398-48cf-a264-876cdb548758",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeActiveDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "55433579-b9a8-437d-b391-fb7d1d533be8",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeActiveLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca877364-7816-4c70-a9c1-d410939e97b4",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeActiveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
