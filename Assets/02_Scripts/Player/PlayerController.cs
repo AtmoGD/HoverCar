@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody RB { get; private set; }
     [SerializeField] private PlayerColor playerColor = PlayerColor.PINK;
     [SerializeField] public PlayerData data = null;
-    [SerializeField] private Camera cam = null;
-    [SerializeField] private CinemachineVirtualCamera virtualCamera = null;
+    [SerializeField] public Camera cam = null;
+    [SerializeField] public CinemachineFreeLook cmCam = null;
 
     void Awake()
     {

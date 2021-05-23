@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
+[RequireComponent(typeof(PlayerController))]
 public class AttackController : MonoBehaviour
 {
     public PlayerController Player { get; private set; }
@@ -31,8 +31,11 @@ public class AttackController : MonoBehaviour
             IsAiming = false;
 
         Vector2 inputDir = _context.ReadValue<Vector2>();
-        Direction = new Vector3(inputDir.x, 0f, inputDir.y);
+
+        Direction = Util.GetDirection(inputDir, Player.cam);
     }
+
+
 
     public void AttackPerformed(InputAction.CallbackContext _context)
     {

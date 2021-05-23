@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerController))]
 public class MovementController : MonoBehaviour
 {
-    public PlayerController player { get; private set; }
+    public PlayerController Player { get; private set; }
     public bool IsCharging { get; private set; }
     public Vector3 Direction { get; private set; }
     public float ChargeAmount { get; private set; }
@@ -16,7 +16,7 @@ public class MovementController : MonoBehaviour
 
     void Awake()
     {
-        player = GetComponent<PlayerController>();
+        Player = GetComponent<PlayerController>();
         Direction = Vector2.zero;
     }
 
@@ -40,7 +40,7 @@ public class MovementController : MonoBehaviour
             ChargeAmount = 0f;
         }
         Vector2 inputDir = _context.ReadValue<Vector2>();
-        Direction = new Vector3(inputDir.x, 0f, inputDir.y);
+        Direction = Util.GetDirection(inputDir, Player.cam);
     }
 
     public void MovePerformed(InputAction.CallbackContext _context)
@@ -59,15 +59,15 @@ public class MovementController : MonoBehaviour
     {
         if (ActualRecover > 0f) return;
 
-        ChargeAmount += player.data.chargeSpeed * Time.deltaTime;
+        ChargeAmount += Player.data.chargeSpeed * Time.deltaTime;
         ChargeAmount = Mathf.Clamp01(ChargeAmount);
     }
 
     private void Move()
     {
-        player.RB.AddForce(Direction * player.data.moveForce * ChargeAmount);
+        Player.RB.AddForce(Direction * Player.data.moveForce * ChargeAmount);
 
         ChargeAmount = 0f;
-        ActualRecover = player.data.recoverTime;
+        ActualRecover = Player.data.recoverTime;
     }
 }
