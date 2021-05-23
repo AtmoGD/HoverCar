@@ -10,7 +10,7 @@ public class MovementController : MonoBehaviour
 {
     public PlayerController player { get; private set; }
     public bool IsCharging { get; private set; }
-    public Vector2 Direction { get; private set; }
+    public Vector3 Direction { get; private set; }
     public float ChargeAmount { get; private set; }
     public float ActualRecover { get; private set; }
 
@@ -22,7 +22,10 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
-        if (IsCharging) Charge();
+        if (IsCharging) {
+            Rotate();
+            Charge();
+        }
 
         ActualRecover -= Time.deltaTime;
     }
@@ -36,8 +39,8 @@ public class MovementController : MonoBehaviour
             IsCharging = false;
             ChargeAmount = 0f;
         }
-
-        Direction = _context.ReadValue<Vector2>();
+        Vector2 inputDir = _context.ReadValue<Vector2>();
+        Direction = new Vector3(inputDir.x, 0f, inputDir.y);
     }
 
     public void MovePerformed(InputAction.CallbackContext _context)
@@ -46,6 +49,10 @@ public class MovementController : MonoBehaviour
 
         if (_context.phase == InputActionPhase.Performed)
             Move();
+    }
+
+    private void Rotate() {
+        transform.LookAt(transform.position + Direction, Vector3.up);
     }
 
     private void Charge()

@@ -22,14 +22,12 @@ public enum AttackPosition
 
 [RequireComponent(typeof(MovementController))]
 [RequireComponent(typeof(AttackController))]
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
     public MovementController MovementController { get; private set; }
     public AttackController AttackController { get; private set; }
     public Rigidbody RB { get; private set; }
-    public SpriteRenderer SR { get; private set; }
     public SkillData AttackUp { get; private set; }
     public SkillData AttackDown { get; private set; }
     public SkillData AttackRight { get; private set; }
@@ -45,7 +43,6 @@ public class PlayerController : MonoBehaviour
         MovementController = GetComponent<MovementController>();
         AttackController = GetComponent<AttackController>();
         RB = GetComponent<Rigidbody>();
-        SR = GetComponent<SpriteRenderer>();
     }
 
     void ChangeColor(PlayerColor _color)
