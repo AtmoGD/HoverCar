@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
 public enum PlayerColor
 {
@@ -31,7 +30,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public PlayerColor playerColor = PlayerColor.PINK;
     [SerializeField] public PlayerData data = null;
     [SerializeField] public Camera cam = null;
-    [SerializeField] public CinemachineFreeLook cmCam = null;
 
     void Awake()
     {

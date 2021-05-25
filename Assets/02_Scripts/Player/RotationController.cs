@@ -17,8 +17,8 @@ public class RotationController : MonoBehaviour
         if (!Player) return;
         
         Vector2 inputDir = _context.ReadValue<Vector2>();
-        Player.cmCam.m_XAxis.m_InputAxisValue = inputDir.x;
-        Player.cmCam.m_YAxis.m_InputAxisValue = inputDir.y;
+        // Player.cmCam.m_XAxis.m_InputAxisValue = inputDir.x;
+        // Player.cmCam.m_YAxis.m_InputAxisValue = inputDir.y;
         // Player.
     }
 }
